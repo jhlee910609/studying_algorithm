@@ -10,13 +10,16 @@ str는 영문 대소문자로만 구성되어 있으며, 대문자는 소문자�
 
 public class ReverseStr {
 
-    StringBuilder sb = new StringBuilder();
-
 
     public String reverseStr(String str) {
         char[] units = str.toCharArray();
         selectionSort(units);
-        return sb.toString();
+        String result = "";
+        for (int i = 0; i <units.length; i++) {
+            result += units[i];
+
+        }
+        return result;
     }
 
     public void selectionSort(char[] units) {
@@ -25,18 +28,12 @@ public class ReverseStr {
         for (i = 0; i < units.length - 1; i++) {
             max = i;
 
-            System.out.println("i : " + i + "=" + units[i]);
-
             for (j = i + 1; j < units.length; j++) {
                 if (units[j] > units[max]) {
                     max = j;
                 }
             }
-             swap(units, max, i) ;
-        }
-
-        for (int k = 0; k < units.length; k++) {
-            sb.append(units[k]);
+            swap(units, max, i);
         }
     }
 
@@ -49,13 +46,22 @@ public class ReverseStr {
     // 아래는 테스트로 출력해 보기 위한 코드입니다.
     public static void main(String[] args) {
         ReverseStr rs = new ReverseStr();
-        System.out.println(rs.reverseStr("ZLvlDgIdOaDwZ"));
+        System.out.println(rs.reverseStr("bNuoEQAjxuuzrpmLxev"));
 
         // ZLvlDgIdOaDwZ
         // wvlgdaZZOLIDD
 
         // Zbcdefg
         // gfedcbZ
+
+        // KJhmFhLVrtgyxN
+        // yxtrmhhgVNLKJF
+
+//        JxOKGKiHIYzHwTROg
+        // zxwigYTROOKKJIHHG
+
+//        bNuoEQAjxuuzrpmLxev
+        //zxxvuuurpomjebQNLEA
     }
 
 }
