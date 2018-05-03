@@ -20,13 +20,10 @@ public class SelectionSort {
                 }
             }
             swap(a, minIndex, i);
-            System.out.println();
-//            for (int k = 0; k < a.length; k++) {
-//                System.out.print(a[k] + ", ");
-//            }
         }
     }
 
+    // swapping min or max value
     static void swap(int[] a, int min, int i) {
         int temp = a[min];
         a[min] = a[i];
