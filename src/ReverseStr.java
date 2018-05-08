@@ -27,7 +27,6 @@ public class ReverseStr {
 
         for (i = 0; i < units.length - 1; i++) {
             max = i;
-
             for (j = i + 1; j < units.length; j++) {
                 if (units[j] > units[max]) {
                     max = j;
